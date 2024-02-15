@@ -1,0 +1,17 @@
+#facebook {
+      position: relative;
+      left: -10%;
+    }
+    #google {
+      position: relative;
+      left: -10%;
+    }
+    @media screen and (max-width: 1279px) {
+     #facebook {
+      left: 0;
+     }
+     #google {
+      left: 0;
+     }
+    }
+
