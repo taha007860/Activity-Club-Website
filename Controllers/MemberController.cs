@@ -1,20 +1,21 @@
 ﻿using ASPDotnetWebApplication.Models;
 using ASPDotnetWebApplication.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging; // Include this for logging
+using Microsoft.AspNetCore.Identity; // Include this for password hashing
 using System;
+using System.Threading.Tasks;
 
 namespace ASPDotnetWebApplication.Controllers
 {
     public class MemberController : Controller
     {
         private readonly ActivityClubContext _context;
-        private readonly ILogger<MemberController> _logger; // Logger
+        private readonly PasswordHasher<Member> _passwordHasher;
 
-        public MemberController(ActivityClubContext context, ILogger<MemberController> logger)
+        public MemberController(ActivityClubContext context)
         {
             _context = context;
-            _logger = logger;
+            _passwordHasher = new PasswordHasher<Member>();
         }
 
         // GET: Member/Register
@@ -28,7 +29,13 @@ namespace ASPDotnetWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            
+            if (model.Password == null)
+            {
+                // Handle the null password case
+                // For example, set an error message and return the view
+                ViewData["ErrorMessage"] = "Password is required.";
+                return View(model);
+            }
 
             try
             {
@@ -36,28 +43,22 @@ namespace ASPDotnetWebApplication.Controllers
                 {
                     FullName = model.FullName,
                     Email = model.Email,
-                    Password = model.Password // Consider hashing the password
+                    Password = _passwordHasher.HashPassword(new Member(), model.Password) // Hash the password
                 };
 
                 _context.Add(member);
                 await _context.SaveChangesAsync();
 
                 ViewData["SuccessMessage"] = "Registration successful!";
-                _logger.LogInformation("Member registered successfully");
-
                 ModelState.Clear();
                 return View();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Log the exception
-                _logger.LogError(ex, "Error occurred while registering member");
-
-                // Handle the exception
-                // You can add a ViewData item to show an error message in the view, or handle it in another way
                 ViewData["ErrorMessage"] = "An error occurred while processing your request.";
                 return View(model);
             }
         }
+
     }
 }
