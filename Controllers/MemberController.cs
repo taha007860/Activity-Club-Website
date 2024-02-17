@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity; // Include this for password hashing
 using System;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ASPDotnetWebApplication.Controllers
 {
@@ -29,11 +30,13 @@ namespace ASPDotnetWebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            if (model.Password == null)
+#pragma warning disable SYSLIB1045 // Suppress the warning
+            var passwordRegex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d]).{6,}$");
+#pragma warning restore SYSLIB1045 // Restore the warning
+
+            if (model.Password == null || !passwordRegex.IsMatch(model.Password))
             {
-                // Handle the null password case
-                // For example, set an error message and return the view
-                ViewData["ErrorMessage"] = "Password is required.";
+                ViewData["ErrorMessage"] = "Password must be at least 6 characters long and include at least one uppercase letter, one lowercase letter, one number, and one symbol.";
                 return View(model);
             }
 
@@ -59,6 +62,7 @@ namespace ASPDotnetWebApplication.Controllers
                 return View(model);
             }
         }
+
 
     }
 }
