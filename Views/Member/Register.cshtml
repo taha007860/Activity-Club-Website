@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/jpeg" href="../assets/img/activity-club.jpeg">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/apple-icon.png">
+    <link rel="icon" type="image/jpeg" href="~/images/activity-club.jpeg">
     <title>
         Sign Up
     </title>
@@ -39,12 +39,6 @@
                                 <h5>Register here</h5>
                             </div>
                             <div class="card-body">
-    @if (ViewData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">
-            @ViewData["SuccessMessage"]
-        </div>
-    }
 
     @if (ViewData["ErrorMessage"] != null)
     {
@@ -72,7 +66,7 @@
         <div class="text-center">
             <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
         </div>
-        <p class="text-sm mt-3 mb-0">Already have an account? <a href="" class="text-dark font-weight-bolder">Sign in</a></p>
+                                    <p class="text-sm mt-3 mb-0">Already have an account? <a href="/Member/Login" class="text-dark font-weight-bolder">Sign in</a></p>
 
         @* Anti-forgery token *@
         @Html.AntiForgeryToken()
