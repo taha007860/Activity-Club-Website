@@ -107,18 +107,27 @@ namespace ASPDotnetWebApplication.Controllers
             }
 
             var result = _passwordHasher.VerifyHashedPassword(member, member.Password, model.Password);
-            if (result != PasswordVerificationResult.Success)
+            if (result == PasswordVerificationResult.Success)
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return View(model);
+                // Store member identifier in session
+                HttpContext.Session.SetInt32("MemberId", member.Id);
+                HttpContext.Session.SetString("MemberName", member.FullName ?? "DefaultName");
+
+                return RedirectToAction("ListOfEvents", "Event");
             }
 
-            // Removed the session-related code
+            // If the result is not Success, it means it's a failure
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return View(model);
 
-            // Redirect to the home page or dashboard
-            return RedirectToAction("ListOfEvents", "Event");
+            // Optionally, you might want to handle specific cases of failure 
+            // such as PasswordVerificationResult.Failed or PasswordVerificationResult.SuccessRehashNeeded
         }
-
-
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Member");
+        }
+  
     }
 }

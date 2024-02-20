@@ -1,15 +1,20 @@
 using ASPDotnetWebApplication.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-// Removed the session state import as it's no longer needed
-// using Microsoft.AspNetCore.Http; 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Removed the session support configuration
+// Add session support
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // You can set the session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 // Register your DbContext with the connection string from appsettings
 var connectionString = builder.Configuration.GetConnectionString("ConnectionString");
@@ -41,12 +46,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Removed the session middleware
+// Enable session middleware
+app.UseSession();
 
 app.UseAuthorization();
-
-// Removed the custom session validation middleware
-// app.UseMiddleware<ValidateSessionMiddleware>();
 
 // Define conventional routes
 app.MapControllerRoute(
