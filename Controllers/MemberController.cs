@@ -116,7 +116,7 @@ namespace ASPDotnetWebApplication.Controllers
             // Removed the session-related code
 
             // Redirect to the home page or dashboard
-            return RedirectToAction("Register", "Member");
+            return RedirectToAction("ListOfEvents", "Event");
         }
 
 

@@ -713,6 +713,10 @@
       "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\css\\event.css",
+      "PackagePath": "staticwebassets\\css\\event.css"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\css\\nucleo-icons.css",
       "PackagePath": "staticwebassets\\css\\nucleo-icons.css"
     },
@@ -747,6 +751,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\banner1.jpg",
       "PackagePath": "staticwebassets\\images\\banner1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\beach-volleyball.jpg",
+      "PackagePath": "staticwebassets\\images\\beach-volleyball.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\bg1.jpg",
@@ -871,6 +879,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\himalayan-hike.jpg",
+      "PackagePath": "staticwebassets\\images\\himalayan-hike.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\home-decor-1.jpg",

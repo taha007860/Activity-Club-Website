@@ -22,7 +22,7 @@ public partial class Event
     public decimal? Cost { get; set; }
 
     public string? Status { get; set; }
-    // Add ImageUrl property to store the URL of the image
+    // Updated to store the URL of the image
     public string? ImageUrl { get; set; }
 
     public virtual ICollection<EventMember> EventMembers { get; set; } = new List<EventMember>();

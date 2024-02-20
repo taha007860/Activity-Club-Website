@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vgdpdPaINmlOiwvl5A4cgFDexoXhcKRwRYZEYd3j8CE=",
+  "Hash": "gY8kEJV8OCQTsneeJFE4sz38Fu+VvNANQAy9SM3zDQY=",
   "Source": "ASPDotnetWebApplication",
   "BasePath": "_content/ASPDotnetWebApplication",
   "Mode": "Default",
@@ -3043,6 +3043,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\css\\event.css",
+      "SourceId": "ASPDotnetWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\",
+      "BasePath": "_content/ASPDotnetWebApplication",
+      "RelativePath": "css/event.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\event.css"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\css\\nucleo-icons.css",
       "SourceId": "ASPDotnetWebApplication",
       "SourceType": "Discovered",
@@ -3194,6 +3211,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\banner1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\beach-volleyball.jpg",
+      "SourceId": "ASPDotnetWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\",
+      "BasePath": "_content/ASPDotnetWebApplication",
+      "RelativePath": "images/beach-volleyball.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\beach-volleyball.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\bg1.jpg",
@@ -3721,6 +3755,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\himalayan-hike.jpg",
+      "SourceId": "ASPDotnetWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\",
+      "BasePath": "_content/ASPDotnetWebApplication",
+      "RelativePath": "images/himalayan-hike.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\himalayan-hike.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\Internships\\IDS\\ASPDotnetWebApplication\\wwwroot\\images\\home-decor-1.jpg",
